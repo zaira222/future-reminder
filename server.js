@@ -26,3 +26,32 @@ app.get('/notes', (req, res) => {
   res.sendFile(__dirname,+  '/notes.html');
 
 });
+
+app.get('/api/notes', (req, res) => {
+  res.sendFile(__dirname, '/db/db.json');
+  const activeNote = req.body;
+notes.push(activeNote);
+        res.send(notes);
+
+});
+
+app.post('/api/notes', (req, res) => {
+  res.sendFile(__dirname, './db/db.json');
+  const newNote = req.body;
+  newNote.id = new ShortUniqueId();
+   notes.push(newNote);
+   fs.writeFileSync('./db/db.json', JSON.stringify(notes));
+   res.json(notes);
+})
+
+app.delete('/api/notes/:id', (req, res) => {
+  
+res.send('delete');
+})
+
+
+
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+  });
+
