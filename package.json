@@ -1,0 +1,24 @@
+{
+  "name": "future-reminder",
+  "version": "1.0.0",
+  "description": "take notes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaira222/future-reminder.git"
+  },
+  "keywords": [],
+  "author": "zaira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaira222/future-reminder/issues"
+  },
+  "homepage": "https://github.com/zaira222/future-reminder#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "short-unique-id": "^4.4.4"
+  }
+}
