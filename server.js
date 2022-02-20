@@ -29,8 +29,6 @@ app.get('/notes', (req, res) => {
 
 app.get('/api/notes', (req, res) => {
   res.sendFile(__dirname, '/db/db.json');
-  const activeNote = req.body;
-notes.push(activeNote);
         res.send(notes);
 
 });
